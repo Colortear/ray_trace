@@ -3,7 +3,7 @@ CC = g++
 CPPFLAGS = -Wall -Wextra -Werror -g
 INC = -I./include
 LFLags = -lm
-SRC = src/vec3.cpp src/main.cpp
+SRC = src/vec3.cpp src/main.cpp src/color.cpp
 OBJS = $(SRC:.cpp=.o)
 RM = rm -f
 

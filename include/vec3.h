@@ -1,9 +1,9 @@
 #ifndef VEC3_H
 # define VEC3_H
 
-#include <math.h>
-#include <stdlib.h>
-#include <iostream>
+# include <math.h>
+# include <stdlib.h>
+# include <iostream>
 
 class	vec3 {
 	public:
@@ -23,35 +23,35 @@ class	vec3 {
 		inline float		operator[](int i) const { return e[i]; }
 		inline float		&operator[](int i) {return e[i]; }
 
-		inline vec3			&operator+=(const vec3 &v2);
-		inline vec3			&operator-=(const vec3 &v2);
-		inline vec3			&operator*=(const vec3 &v2);
-		inline vec3			&operator/=(const vec3 &v2);
-		inline vec3			&operator*=(const float t);
-		inline vec3			&operator/=(const float t);
+		vec3				&operator+=(const vec3 &v2);
+		vec3				&operator-=(const vec3 &v2);
+		vec3				&operator*=(const vec3 &v2);
+		vec3				&operator/=(const vec3 &v2);
+		vec3				&operator*=(const float t);
+		vec3				&operator/=(const float t);
 
-inline float				length() const {
+		inline float		length() const {
 			return (sqrt(e[0]*e[0] + e[1]*e[1] + e[2]*e[2])); }
 		inline float		squared_length() const {
 			return (e[0]*e[0] + e[1]*e[1] + e[2]*e[2]); }
-		inline void			make_unit_vector();
+		void				make_unit_vector();
 
 		float e[3];
 };
 
-inline std::istream		&operator>>(std::istream &is, vec3 &t);
-inline std::ostream		&operator<<(std::ostream &os, vec3 &t);
+std::istream	&operator>>(std::istream &is, vec3 &t);
+std::ostream	&operator<<(std::ostream &os, vec3 &t);
 
-inline vec3			operator+(const vec3 &v1, const vec3 &v2);
-inline vec3			operator-(const vec3 &v1, const vec3 &v2);
-inline vec3			operator*(const vec3 &v1, const vec3 &v2);
-inline vec3			operator/(const vec3 &v1, const vec3 &v2);
-inline vec3			operator*(float t, const vec3 &v);
-inline vec3			operator/(float t, const vec3 &v);
-inline vec3			operator*(const vec3 &v, float t);
-inline vec3			operator/(vec3 v, float t);
-inline float		dot(const vec3 &v, float t);
-inline vec3			cross(const vec3 &v1, vec3 &v2);
-inline vec3			unit_vector(vec3 v);
+vec3			operator+(const vec3 &v1, const vec3 &v2);
+vec3			operator-(const vec3 &v1, const vec3 &v2);
+vec3			operator*(const vec3 &v1, const vec3 &v2);
+vec3			operator/(const vec3 &v1, const vec3 &v2);
+vec3			operator*(float t, const vec3 &v);
+vec3			operator/(float t, const vec3 &v);
+vec3			operator*(const vec3 &v, float t);
+vec3			operator/(vec3 v, float t);
+float			dot(const vec3 &v, float t);
+vec3			cross(const vec3 &v1, vec3 &v2);
+vec3			unit_vector(vec3 v);
 
 #endif /* VEC3_H */
