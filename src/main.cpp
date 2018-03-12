@@ -18,9 +18,9 @@ int main(void)
 	int		ig;
 	int		ib;
 
-	nx = 600;
-	ny = 300;
-	ns = 300;
+	nx = 400;
+	ny = 200;
+	ns = 200;
 	std::cout << "P3\n" << nx << " " << ny << "\n255\n";
 	list[0] = new sphere(vec3(0,0,-1), 0.5);
 	list[1] = new sphere(vec3(0,-100.5,-1), 100);
