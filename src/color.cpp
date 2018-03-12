@@ -8,7 +8,7 @@ vec3		color(const ray &r, hitable *world)
 	vec3		target;
 	float		t;
 
-	if (world->hit(r, 0.0, FLT_MAX, rec))
+	if (world->hit(r, 0.001, FLT_MAX, rec))
 	{
 		target = rec.p + rec.normal + random_in_unit_sphere();
 		return (0.5 * color(ray(rec.p, target - rec.p), world));
