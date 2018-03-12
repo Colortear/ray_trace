@@ -9,7 +9,7 @@ OBJS = $(SRC:.cpp=.o)
 RM = rm -f
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(LFLAGS) $(INC) -o $(NAME) $(OBJS)
+	$(CC) $(CPPFLAGS) $(LFLAGS) $(INC) -o $(NAME) $(OBJS)
 
 all: $(NAME)
 
