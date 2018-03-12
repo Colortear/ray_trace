@@ -39,6 +39,7 @@ int main(void)
 				col += color(r, world);
 			}
 			col /= float(ns);
+			col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
 			ir = int(255.99*col[0]);
 			ig = int(255.99*col[1]);
 			ib = int(255.99*col[2]);
