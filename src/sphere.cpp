@@ -8,7 +8,6 @@ bool	hit_sphere(const vec3 &center, float radius, const ray &r)
 	float	c;
 	float	discriminant;
 
-	std::cout << "here" << std::endl;
 	oc = r.origin() - center;
 	a = dot(r.direction(), r.direction());
 	b = 2.0 * dot(oc, r.direction());
